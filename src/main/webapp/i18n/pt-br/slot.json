@@ -1,0 +1,25 @@
+{
+  "unblockItApp": {
+    "slot": {
+      "home": {
+        "title": "Slots",
+        "createLabel": "Criar novo Slot",
+        "createOrEditLabel": "Criar ou editar Slot",
+        "notFound": "Nenhum Slot encontrado"
+      },
+      "created": "Um novo Slot foi criado com o identificador {{ param }}",
+      "updated": "Um Slot foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Slot foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Slot {{ id }}?"
+      },
+      "detail": {
+        "title": "Slot"
+      },
+      "data": "Data",
+      "obs": "Obs",
+      "confirmado": "Confirmado",
+      "conteudo": "Conteudo"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tarefa">
+            <h2><span jhiTranslate="unblockItApp.tarefa.detail.title">Tarefa</span> {{ tarefa.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="unblockItApp.tarefa.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ tarefa.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.tarefa.dataLimite">Data Limite</span></dt>
+                <dd>
+                    <span>{{ tarefa.dataLimite }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.tarefa.concluida">Concluida</span></dt>
+                <dd>
+                    <span>{{ tarefa.concluida }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.tarefa.squadTarefa">Squad Tarefa</span></dt>
+                <dd>
+                    <div *ngIf="tarefa.squadTarefa">
+                        <a [routerLink]="['/squad', tarefa.squadTarefa?.id, 'view']">{{ tarefa.squadTarefa?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/tarefa', tarefa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

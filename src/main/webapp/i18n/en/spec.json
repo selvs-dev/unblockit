@@ -1,0 +1,23 @@
+{
+  "unblockItApp": {
+    "spec": {
+      "home": {
+        "title": "Specs",
+        "createLabel": "Create a new Spec",
+        "createOrEditLabel": "Create or edit a Spec",
+        "notFound": "No Specs found"
+      },
+      "created": "A new Spec is created with identifier {{ param }}",
+      "updated": "A Spec is updated with identifier {{ param }}",
+      "deleted": "A Spec is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Spec {{ id }}?"
+      },
+      "detail": {
+        "title": "Spec"
+      },
+      "nome": "Nome",
+      "perfil": "Perfil"
+    }
+  }
+}

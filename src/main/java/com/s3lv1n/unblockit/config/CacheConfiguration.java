@@ -47,6 +47,29 @@ public class CacheConfiguration {
             createCache(cm, com.s3lv1n.unblockit.domain.User.class.getName());
             createCache(cm, com.s3lv1n.unblockit.domain.Authority.class.getName());
             createCache(cm, com.s3lv1n.unblockit.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.s3lv1n.unblockit.domain.Ciclo.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Ciclo.class.getName() + ".squads");
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName() + ".casoSucessos");
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName() + ".depoimentos");
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName() + ".feedbacks");
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName() + ".tarefas");
+            createCache(cm, com.s3lv1n.unblockit.domain.Squad.class.getName() + ".squadMembers");
+            createCache(cm, com.s3lv1n.unblockit.domain.SquadMember.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.SquadMember.class.getName() + ".feedbacks");
+            createCache(cm, com.s3lv1n.unblockit.domain.Slot.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Slot.class.getName() + ".conteudos");
+            createCache(cm, com.s3lv1n.unblockit.domain.Capability.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Capability.class.getName() + ".praticas");
+            createCache(cm, com.s3lv1n.unblockit.domain.Conteudo.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Pratica.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Spec.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.CasoSucesso.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Depoimento.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Feedback.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Tarefa.class.getName());
+            createCache(cm, com.s3lv1n.unblockit.domain.Tarefa.class.getName() + ".andamentos");
+            createCache(cm, com.s3lv1n.unblockit.domain.Andamento.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

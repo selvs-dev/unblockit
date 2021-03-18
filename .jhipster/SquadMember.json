@@ -1,0 +1,44 @@
+{
+  "name": "SquadMember",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "perfil",
+      "fieldType": "PERFILSQUAD",
+      "fieldValues": "TEAM_LEAD,TECH_LEAD,PO,TEAM_MEMBER"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "feedback",
+      "otherEntityRelationshipName": "squadMemberFeedback",
+      "relationshipName": "feedback"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squad",
+      "otherEntityRelationshipName": "squadMember",
+      "relationshipName": "squadSquadMember",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318140847",
+  "entityTableName": "squad_member",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

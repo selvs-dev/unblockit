@@ -1,0 +1,40 @@
+{
+  "name": "Feedback",
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "acao",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squad",
+      "otherEntityRelationshipName": "feedback",
+      "relationshipName": "squadFeedback",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squadMember",
+      "otherEntityRelationshipName": "feedback",
+      "relationshipName": "squadMemberFeedback",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141647",
+  "entityTableName": "feedback",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

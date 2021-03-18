@@ -1,0 +1,26 @@
+{
+  "unblockItApp": {
+    "tarefa": {
+      "home": {
+        "title": "Tarefas",
+        "createLabel": "Create a new Tarefa",
+        "createOrEditLabel": "Create or edit a Tarefa",
+        "notFound": "No Tarefas found"
+      },
+      "created": "A new Tarefa is created with identifier {{ param }}",
+      "updated": "A Tarefa is updated with identifier {{ param }}",
+      "deleted": "A Tarefa is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tarefa {{ id }}?"
+      },
+      "detail": {
+        "title": "Tarefa"
+      },
+      "descricao": "Descricao",
+      "dataLimite": "Data Limite",
+      "concluida": "Concluida",
+      "andamento": "Andamento",
+      "squadTarefa": "Squad Tarefa"
+    }
+  }
+}

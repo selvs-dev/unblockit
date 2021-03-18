@@ -1,0 +1,33 @@
+{
+  "name": "Depoimento",
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmado",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squad",
+      "otherEntityRelationshipName": "depoimento",
+      "relationshipName": "squadDepoimento",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141547",
+  "entityTableName": "depoimento",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

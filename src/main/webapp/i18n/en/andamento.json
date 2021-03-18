@@ -1,0 +1,24 @@
+{
+  "unblockItApp": {
+    "andamento": {
+      "home": {
+        "title": "Andamentos",
+        "createLabel": "Create a new Andamento",
+        "createOrEditLabel": "Create or edit a Andamento",
+        "notFound": "No Andamentos found"
+      },
+      "created": "A new Andamento is created with identifier {{ param }}",
+      "updated": "A Andamento is updated with identifier {{ param }}",
+      "deleted": "A Andamento is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Andamento {{ id }}?"
+      },
+      "detail": {
+        "title": "Andamento"
+      },
+      "dataAndamento": "Data Andamento",
+      "descricao": "Descricao",
+      "tarefaAndamento": "Tarefa Andamento"
+    }
+  }
+}

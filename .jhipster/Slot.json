@@ -1,0 +1,36 @@
+{
+  "name": "Slot",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmado",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "conteudo",
+      "otherEntityRelationshipName": "slotConteudo",
+      "relationshipName": "conteudo"
+    }
+  ],
+  "changelogDate": "20210318140947",
+  "entityTableName": "slot",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

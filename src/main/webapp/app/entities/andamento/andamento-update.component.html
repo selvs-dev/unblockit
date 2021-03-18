@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-andamento-heading" jhiTranslate="unblockItApp.andamento.home.createOrEditLabel">Create or edit a Andamento</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.andamento.dataAndamento" for="field_dataAndamento">Data Andamento</label>
+                    <div class="input-group">
+                        <input id="field_dataAndamento" type="text" class="form-control" name="dataAndamento" ngbDatepicker #dataAndamentoDp="ngbDatepicker" formControlName="dataAndamento"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataAndamentoDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.andamento.descricao" for="field_descricao">Descricao</label>
+                    <input type="text" class="form-control" name="descricao" id="field_descricao"
+                           formControlName="descricao"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.andamento.tarefaAndamento" for="field_tarefaAndamento">Tarefa Andamento</label>
+                    <select class="form-control" id="field_tarefaAndamento" name="tarefaAndamento" formControlName="tarefaAndamento">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="tarefaOption.id === editForm.get('tarefaAndamento')!.value?.id ? editForm.get('tarefaAndamento')!.value : tarefaOption" *ngFor="let tarefaOption of tarefas; trackBy: trackById">{{ tarefaOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

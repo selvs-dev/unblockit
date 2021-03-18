@@ -1,0 +1,24 @@
+{
+  "unblockItApp": {
+    "depoimento": {
+      "home": {
+        "title": "Depoimentos",
+        "createLabel": "Create a new Depoimento",
+        "createOrEditLabel": "Create or edit a Depoimento",
+        "notFound": "No Depoimentos found"
+      },
+      "created": "A new Depoimento is created with identifier {{ param }}",
+      "updated": "A Depoimento is updated with identifier {{ param }}",
+      "deleted": "A Depoimento is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Depoimento {{ id }}?"
+      },
+      "detail": {
+        "title": "Depoimento"
+      },
+      "descricao": "Descricao",
+      "confirmado": "Confirmado",
+      "squadDepoimento": "Squad Depoimento"
+    }
+  }
+}

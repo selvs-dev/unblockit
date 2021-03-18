@@ -1,0 +1,26 @@
+{
+  "name": "Spec",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "perfil",
+      "fieldType": "PERFILSPEC",
+      "fieldValues": "AGILISTA,SRE,DEVSECOPS,DEVOPS,TEAM_LEAD,QA"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210318141347",
+  "entityTableName": "spec",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

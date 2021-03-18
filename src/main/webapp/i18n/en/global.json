@@ -7,6 +7,19 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "ciclo": "Ciclo",
+        "squad": "Squad",
+        "squadMember": "Squad Member",
+        "slot": "Slot",
+        "capability": "Capability",
+        "conteudo": "Conteudo",
+        "pratica": "Pratica",
+        "spec": "Spec",
+        "casoSucesso": "Caso Sucesso",
+        "depoimento": "Depoimento",
+        "feedback": "Feedback",
+        "tarefa": "Tarefa",
+        "andamento": "Andamento",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

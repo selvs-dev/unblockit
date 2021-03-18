@@ -1,0 +1,29 @@
+{
+  "name": "Pratica",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "capability",
+      "otherEntityRelationshipName": "pratica",
+      "relationshipName": "capabilityPratica",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141247",
+  "entityTableName": "pratica",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Tarefa",
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataLimite",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "concluida",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "andamento",
+      "otherEntityRelationshipName": "tarefaAndamento",
+      "relationshipName": "andamento"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squad",
+      "otherEntityRelationshipName": "tarefa",
+      "relationshipName": "squadTarefa",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141747",
+  "entityTableName": "tarefa",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
