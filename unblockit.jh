@@ -1,0 +1,141 @@
+enum TIPOCONTEUDO {
+  KICKOFF,
+  CULTURA,
+  CONHECENDO,
+  ASSESSMENT, 
+  DOJO,
+  ENCERRAMENTO
+}
+
+enum PERFILSPEC {
+  AGILISTA,
+  SRE,
+  DEVSECOPS, 
+  DEVOPS,
+  TEAM_LEAD, 
+  QA
+}
+
+enum PERFILSQUAD {
+  TEAM_LEAD,
+  TECH_LEAD,
+  PO, 
+  TEAM_MEMBER,
+  TEAM_LEAD
+}
+
+entity Ciclo {
+  nome String
+}
+
+entity Squad {
+  nome String, 
+  comunidade String,
+  obs String
+}
+
+entity SquadMember {
+  nome String, 
+  perfil PERFILSQUAD,
+  obs String
+}
+
+entity Slot {
+  data LocalDate, 
+  obs String
+  confirmado Boolean,
+}
+
+entity Capability {
+  nome String
+}
+
+entity Conteudo {
+  Tipo TIPOCONTEUDO,
+  obs String, 
+  confirmado Boolean
+}
+
+entity Pratica {
+  nome String
+}
+
+entity Spec {
+  nome String
+  perfil PERFILSPEC
+}
+
+entity Case {
+  descricao String,
+  confirmado String
+}
+
+entity Depoimento {
+  descricao String,
+  confirmado String
+}
+
+entity Feedback {
+  descricao String,
+  acao String
+}
+
+entity Tarefa {
+  descricao String,
+  dataLimite LocalDate,
+  concluida String
+}
+
+entity Andamento {
+  dataAndamento LocalDate,
+  descricao String
+}
+
+relationship OneToMany {
+  Ciclo to Squad{cicloSquad}
+}
+
+relationship OneToMany {
+  Squad to Case{squadCase}
+}
+
+relationship OneToMany {
+  Squad to Depoimento{squadDepoimento}
+}
+
+relationship OneToMany {
+  Squad to Feedback{squadFeedback}
+}
+
+relationship OneToMany {
+  SquadMember to Feedback{squadMemberFeedback}
+}
+
+relationship OneToMany {
+  Squad to Tarefa{squadTarefa}
+}
+
+relationship OneToMany {
+  Tarefa to Andamento{tarefaAndamento}
+}
+
+relationship OneToMany {
+  Squad to SquadMember{squadSquadMember}
+}
+
+relationship OneToMany {
+  Capability to Pratica{capabilityPratica}
+}
+
+relationship OneToMany {
+  Squad to Case{squadCase}
+}
+
+relationship OneToMany {
+  Slot to Conteudo{slotConteudo}
+}
+
+
+
+
+
