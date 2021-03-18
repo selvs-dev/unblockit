@@ -1,0 +1,24 @@
+{
+  "unblockItApp": {
+    "casoSucesso": {
+      "home": {
+        "title": "Caso Sucessos",
+        "createLabel": "Create a new Caso Sucesso",
+        "createOrEditLabel": "Create or edit a Caso Sucesso",
+        "notFound": "No Caso Sucessos found"
+      },
+      "created": "A new Caso Sucesso is created with identifier {{ param }}",
+      "updated": "A Caso Sucesso is updated with identifier {{ param }}",
+      "deleted": "A Caso Sucesso is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Caso Sucesso {{ id }}?"
+      },
+      "detail": {
+        "title": "Caso Sucesso"
+      },
+      "descricao": "Descricao",
+      "confirmado": "Confirmado",
+      "squadCasoSucesso": "Squad Caso Sucesso"
+    }
+  }
+}

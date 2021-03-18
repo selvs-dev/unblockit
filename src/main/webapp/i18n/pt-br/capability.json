@@ -1,0 +1,23 @@
+{
+  "unblockItApp": {
+    "capability": {
+      "home": {
+        "title": "Capabilities",
+        "createLabel": "Criar novo Capability",
+        "createOrEditLabel": "Criar ou editar Capability",
+        "notFound": "Nenhum Capability encontrado"
+      },
+      "created": "Um novo Capability foi criado com o identificador {{ param }}",
+      "updated": "Um Capability foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Capability foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Capability {{ id }}?"
+      },
+      "detail": {
+        "title": "Capability"
+      },
+      "nome": "Nome",
+      "pratica": "Pratica"
+    }
+  }
+}

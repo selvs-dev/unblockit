@@ -1,0 +1,38 @@
+{
+  "name": "Conteudo",
+  "fields": [
+    {
+      "fieldName": "tipo",
+      "fieldType": "TIPOCONTEUDO",
+      "fieldValues": "KICKOFF,CULTURA,CONHECENDO,ASSESSMENT,DOJO,ENCERRAMENTO"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmado",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "slot",
+      "otherEntityRelationshipName": "conteudo",
+      "relationshipName": "slotConteudo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141147",
+  "entityTableName": "conteudo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

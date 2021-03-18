@@ -1,0 +1,26 @@
+{
+  "unblockItApp": {
+    "squadMember": {
+      "home": {
+        "title": "Squad Members",
+        "createLabel": "Create a new Squad Member",
+        "createOrEditLabel": "Create or edit a Squad Member",
+        "notFound": "No Squad Members found"
+      },
+      "created": "A new Squad Member is created with identifier {{ param }}",
+      "updated": "A Squad Member is updated with identifier {{ param }}",
+      "deleted": "A Squad Member is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Squad Member {{ id }}?"
+      },
+      "detail": {
+        "title": "Squad Member"
+      },
+      "nome": "Nome",
+      "perfil": "Perfil",
+      "obs": "Obs",
+      "feedback": "Feedback",
+      "squadSquadMember": "Squad Squad Member"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-feedback-heading" jhiTranslate="unblockItApp.feedback.home.createOrEditLabel">Create or edit a Feedback</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.feedback.descricao" for="field_descricao">Descricao</label>
+                    <input type="text" class="form-control" name="descricao" id="field_descricao"
+                           formControlName="descricao"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.feedback.acao" for="field_acao">Acao</label>
+                    <input type="text" class="form-control" name="acao" id="field_acao"
+                           formControlName="acao"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.feedback.squadFeedback" for="field_squadFeedback">Squad Feedback</label>
+                    <select class="form-control" id="field_squadFeedback" name="squadFeedback" formControlName="squadFeedback">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="squadOption.id === editForm.get('squadFeedback')!.value?.id ? editForm.get('squadFeedback')!.value : squadOption" *ngFor="let squadOption of squads; trackBy: trackById">{{ squadOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.feedback.squadMemberFeedback" for="field_squadMemberFeedback">Squad Member Feedback</label>
+                    <select class="form-control" id="field_squadMemberFeedback" name="squadMemberFeedback" formControlName="squadMemberFeedback">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="squadMemberOption.id === editForm.get('squadMemberFeedback')!.value?.id ? editForm.get('squadMemberFeedback')!.value : squadMemberOption" *ngFor="let squadMemberOption of squadmembers; trackBy: trackById">{{ squadMemberOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{
+  "name": "CasoSucesso",
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmado",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "squad",
+      "otherEntityRelationshipName": "casoSucesso",
+      "relationshipName": "squadCasoSucesso",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318141447",
+  "entityTableName": "caso_sucesso",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Squad",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comunidade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "casoSucesso",
+      "otherEntityRelationshipName": "squadCasoSucesso",
+      "relationshipName": "casoSucesso"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "depoimento",
+      "otherEntityRelationshipName": "squadDepoimento",
+      "relationshipName": "depoimento"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "feedback",
+      "otherEntityRelationshipName": "squadFeedback",
+      "relationshipName": "feedback"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "tarefa",
+      "otherEntityRelationshipName": "squadTarefa",
+      "relationshipName": "tarefa"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "squadMember",
+      "otherEntityRelationshipName": "squadSquadMember",
+      "relationshipName": "squadMember"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ciclo",
+      "otherEntityRelationshipName": "squad",
+      "relationshipName": "cicloSquad",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210318140747",
+  "entityTableName": "squad",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

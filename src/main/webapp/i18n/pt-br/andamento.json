@@ -1,0 +1,24 @@
+{
+  "unblockItApp": {
+    "andamento": {
+      "home": {
+        "title": "Andamentos",
+        "createLabel": "Criar novo Andamento",
+        "createOrEditLabel": "Criar ou editar Andamento",
+        "notFound": "Nenhum Andamento encontrado"
+      },
+      "created": "Um novo Andamento foi criado com o identificador {{ param }}",
+      "updated": "Um Andamento foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Andamento foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Andamento {{ id }}?"
+      },
+      "detail": {
+        "title": "Andamento"
+      },
+      "dataAndamento": "Data Andamento",
+      "descricao": "Descricao",
+      "tarefaAndamento": "Tarefa Andamento"
+    }
+  }
+}

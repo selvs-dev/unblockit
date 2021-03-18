@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="casoSucesso">
+            <h2><span jhiTranslate="unblockItApp.casoSucesso.detail.title">Caso Sucesso</span> {{ casoSucesso.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="unblockItApp.casoSucesso.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ casoSucesso.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.casoSucesso.confirmado">Confirmado</span></dt>
+                <dd>
+                    <span>{{ casoSucesso.confirmado }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.casoSucesso.squadCasoSucesso">Squad Caso Sucesso</span></dt>
+                <dd>
+                    <div *ngIf="casoSucesso.squadCasoSucesso">
+                        <a [routerLink]="['/squad', casoSucesso.squadCasoSucesso?.id, 'view']">{{ casoSucesso.squadCasoSucesso?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/caso-sucesso', casoSucesso.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

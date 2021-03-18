@@ -1,0 +1,25 @@
+{
+  "unblockItApp": {
+    "conteudo": {
+      "home": {
+        "title": "Conteudos",
+        "createLabel": "Create a new Conteudo",
+        "createOrEditLabel": "Create or edit a Conteudo",
+        "notFound": "No Conteudos found"
+      },
+      "created": "A new Conteudo is created with identifier {{ param }}",
+      "updated": "A Conteudo is updated with identifier {{ param }}",
+      "deleted": "A Conteudo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Conteudo {{ id }}?"
+      },
+      "detail": {
+        "title": "Conteudo"
+      },
+      "tipo": "Tipo",
+      "obs": "Obs",
+      "confirmado": "Confirmado",
+      "slotConteudo": "Slot Conteudo"
+    }
+  }
+}

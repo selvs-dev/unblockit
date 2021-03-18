@@ -1,0 +1,30 @@
+{
+  "unblockItApp": {
+    "squad": {
+      "home": {
+        "title": "Squads",
+        "createLabel": "Create a new Squad",
+        "createOrEditLabel": "Create or edit a Squad",
+        "notFound": "No Squads found"
+      },
+      "created": "A new Squad is created with identifier {{ param }}",
+      "updated": "A Squad is updated with identifier {{ param }}",
+      "deleted": "A Squad is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Squad {{ id }}?"
+      },
+      "detail": {
+        "title": "Squad"
+      },
+      "nome": "Nome",
+      "comunidade": "Comunidade",
+      "obs": "Obs",
+      "casoSucesso": "Caso Sucesso",
+      "depoimento": "Depoimento",
+      "feedback": "Feedback",
+      "tarefa": "Tarefa",
+      "squadMember": "Squad Member",
+      "cicloSquad": "Ciclo Squad"
+    }
+  }
+}

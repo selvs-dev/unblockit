@@ -1,0 +1,28 @@
+{
+  "name": "Capability",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "pratica",
+      "otherEntityRelationshipName": "capabilityPratica",
+      "relationshipName": "pratica"
+    }
+  ],
+  "changelogDate": "20210318141047",
+  "entityTableName": "capability",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

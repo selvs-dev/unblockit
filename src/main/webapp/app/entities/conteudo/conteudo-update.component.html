@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-conteudo-heading" jhiTranslate="unblockItApp.conteudo.home.createOrEditLabel">Create or edit a Conteudo</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.conteudo.tipo" for="field_tipo">Tipo</label>
+                    <select class="form-control" name="tipo" formControlName="tipo" id="field_tipo">
+                        <option value="KICKOFF">{{ 'unblockItApp.TIPOCONTEUDO.KICKOFF' | translate }}</option>
+                        <option value="CULTURA">{{ 'unblockItApp.TIPOCONTEUDO.CULTURA' | translate }}</option>
+                        <option value="CONHECENDO">{{ 'unblockItApp.TIPOCONTEUDO.CONHECENDO' | translate }}</option>
+                        <option value="ASSESSMENT">{{ 'unblockItApp.TIPOCONTEUDO.ASSESSMENT' | translate }}</option>
+                        <option value="DOJO">{{ 'unblockItApp.TIPOCONTEUDO.DOJO' | translate }}</option>
+                        <option value="ENCERRAMENTO">{{ 'unblockItApp.TIPOCONTEUDO.ENCERRAMENTO' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.conteudo.obs" for="field_obs">Obs</label>
+                    <input type="text" class="form-control" name="obs" id="field_obs"
+                           formControlName="obs"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.conteudo.confirmado" for="field_confirmado">Confirmado</label>
+                    <input type="checkbox" class="form-control" name="confirmado" id="field_confirmado"
+                           formControlName="confirmado"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="unblockItApp.conteudo.slotConteudo" for="field_slotConteudo">Slot Conteudo</label>
+                    <select class="form-control" id="field_slotConteudo" name="slotConteudo" formControlName="slotConteudo">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="slotOption.id === editForm.get('slotConteudo')!.value?.id ? editForm.get('slotConteudo')!.value : slotOption" *ngFor="let slotOption of slots; trackBy: trackById">{{ slotOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

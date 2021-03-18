@@ -1,0 +1,25 @@
+{
+  "unblockItApp": {
+    "feedback": {
+      "home": {
+        "title": "Feedbacks",
+        "createLabel": "Criar novo Feedback",
+        "createOrEditLabel": "Criar ou editar Feedback",
+        "notFound": "Nenhum Feedback encontrado"
+      },
+      "created": "Um novo Feedback foi criado com o identificador {{ param }}",
+      "updated": "Um Feedback foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Feedback foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Feedback {{ id }}?"
+      },
+      "detail": {
+        "title": "Feedback"
+      },
+      "descricao": "Descricao",
+      "acao": "Acao",
+      "squadFeedback": "Squad Feedback",
+      "squadMemberFeedback": "Squad Member Feedback"
+    }
+  }
+}

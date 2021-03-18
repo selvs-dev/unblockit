@@ -1,0 +1,23 @@
+{
+  "unblockItApp": {
+    "ciclo": {
+      "home": {
+        "title": "Ciclos",
+        "createLabel": "Create a new Ciclo",
+        "createOrEditLabel": "Create or edit a Ciclo",
+        "notFound": "No Ciclos found"
+      },
+      "created": "A new Ciclo is created with identifier {{ param }}",
+      "updated": "A Ciclo is updated with identifier {{ param }}",
+      "deleted": "A Ciclo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ciclo {{ id }}?"
+      },
+      "detail": {
+        "title": "Ciclo"
+      },
+      "nome": "Nome",
+      "squad": "Squad"
+    }
+  }
+}

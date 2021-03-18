@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="depoimento">
+            <h2><span jhiTranslate="unblockItApp.depoimento.detail.title">Depoimento</span> {{ depoimento.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="unblockItApp.depoimento.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ depoimento.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.depoimento.confirmado">Confirmado</span></dt>
+                <dd>
+                    <span>{{ depoimento.confirmado }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.depoimento.squadDepoimento">Squad Depoimento</span></dt>
+                <dd>
+                    <div *ngIf="depoimento.squadDepoimento">
+                        <a [routerLink]="['/squad', depoimento.squadDepoimento?.id, 'view']">{{ depoimento.squadDepoimento?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/depoimento', depoimento.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

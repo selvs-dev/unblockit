@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="squadMember">
+            <h2><span jhiTranslate="unblockItApp.squadMember.detail.title">Squad Member</span> {{ squadMember.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="unblockItApp.squadMember.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ squadMember.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.squadMember.perfil">Perfil</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'unblockItApp.PERFILSQUAD.' + squadMember.perfil }}">{{ squadMember.perfil }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.squadMember.obs">Obs</span></dt>
+                <dd>
+                    <span>{{ squadMember.obs }}</span>
+                </dd>
+                <dt><span jhiTranslate="unblockItApp.squadMember.squadSquadMember">Squad Squad Member</span></dt>
+                <dd>
+                    <div *ngIf="squadMember.squadSquadMember">
+                        <a [routerLink]="['/squad', squadMember.squadSquadMember?.id, 'view']">{{ squadMember.squadSquadMember?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/squad-member', squadMember.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

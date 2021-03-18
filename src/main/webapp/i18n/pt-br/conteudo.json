@@ -1,0 +1,25 @@
+{
+  "unblockItApp": {
+    "conteudo": {
+      "home": {
+        "title": "Conteudos",
+        "createLabel": "Criar novo Conteudo",
+        "createOrEditLabel": "Criar ou editar Conteudo",
+        "notFound": "Nenhum Conteudo encontrado"
+      },
+      "created": "Um novo Conteudo foi criado com o identificador {{ param }}",
+      "updated": "Um Conteudo foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Conteudo foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Conteudo {{ id }}?"
+      },
+      "detail": {
+        "title": "Conteudo"
+      },
+      "tipo": "Tipo",
+      "obs": "Obs",
+      "confirmado": "Confirmado",
+      "slotConteudo": "Slot Conteudo"
+    }
+  }
+}

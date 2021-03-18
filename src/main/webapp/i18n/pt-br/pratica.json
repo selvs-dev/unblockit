@@ -1,0 +1,23 @@
+{
+  "unblockItApp": {
+    "pratica": {
+      "home": {
+        "title": "Praticas",
+        "createLabel": "Criar novo Pratica",
+        "createOrEditLabel": "Criar ou editar Pratica",
+        "notFound": "Nenhum Pratica encontrado"
+      },
+      "created": "Um novo Pratica foi criado com o identificador {{ param }}",
+      "updated": "Um Pratica foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Pratica foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Pratica {{ id }}?"
+      },
+      "detail": {
+        "title": "Pratica"
+      },
+      "nome": "Nome",
+      "capabilityPratica": "Capability Pratica"
+    }
+  }
+}

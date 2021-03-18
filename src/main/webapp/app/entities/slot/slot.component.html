@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="unblockItApp.slot.home.title">Slots</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-slot" [routerLink]="['/slot/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="unblockItApp.slot.home.createLabel">
+            Create a new Slot
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="slots?.length === 0">
+        <span jhiTranslate="unblockItApp.slot.home.notFound">No slots found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="slots && slots.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="unblockItApp.slot.data">Data</span></th>
+                    <th scope="col" ><span jhiTranslate="unblockItApp.slot.obs">Obs</span></th>
+                    <th scope="col" ><span jhiTranslate="unblockItApp.slot.confirmado">Confirmado</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let slot of slots ;trackBy: trackId">
+                    <td><a [routerLink]="['/slot', slot.id, 'view']">{{ slot.id }}</a></td>
+                    <td>{{ slot.data | date:'mediumDate' }}</td>
+                    <td>{{ slot.obs }}</td>
+                    <td>{{ slot.confirmado }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/slot', slot.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/slot', slot.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(slot)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
